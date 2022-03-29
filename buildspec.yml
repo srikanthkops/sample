@@ -6,16 +6,16 @@ phases:
       
       
       - echo Installing Yarn...
-      - yarn install --production
+      
       
   pre_build:
     commands:
       - echo Installing dependencies...
-      - yarn
+    
   build:
     commands:
       - echo Testing...
-      - yarn test
+    
       
 artifacts:
   files:
