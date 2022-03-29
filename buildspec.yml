@@ -3,8 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing Python2
-      - apk add --no-cache python2 g++ make
+      
       
       - echo Installing Yarn...
       - yarn install --production
