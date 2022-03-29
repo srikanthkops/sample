@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing Python2
+      - apk add --no-cache python2 g++ make
+      
+      - echo Installing Yarn...
+      - yarn install --production
+      
+  pre_build:
+    commands:
+      - echo Installing dependencies...
+      - yarn
+  build:
+    commands:
+      - echo Testing...
+      - yarn test
+      - echo Building...
+      - yarn build
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: dist
